@@ -19,7 +19,7 @@ gamma = 0.1
 grad_accum = 1
 
 img_nrow = 8
-manualSeed = 123
+manualSeed = 42
 
 def run():
     torch.set_printoptions(threshold=1)
@@ -31,7 +31,7 @@ def run():
     parser.add_argument('--workers', type=int, help='number of data loading workers', default=2)
     parser.add_argument('--outf', default='.', help='folder to output images and model checkpoints')
     
-    model = torch.load('epoch_100.pth', map_location='cpu')
+    model = None #torch.load('epoch_100.pth', map_location='cpu')
     
     opt = parser.parse_args()
     print(opt)
